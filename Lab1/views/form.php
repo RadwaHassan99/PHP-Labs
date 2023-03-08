@@ -38,7 +38,9 @@ input[type=submit]:hover {
     <body>
         <h3> Contact Form </h3>
         <div id="after_submit">
-            <?php echo $error ?? NULL ?>
+          <h3 style="color:red">
+            <?php echo $error; ?>
+        </h3>
         </div>
         <form id="contact_form" action="index.php" method="POST" enctype="multipart/form-data">
                          
