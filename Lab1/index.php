@@ -21,7 +21,7 @@ if(!empty($_POST)) {
     }else if(strlen($_POST["name"])>MAX_NAME_LENGTH){
         $error = "Name must be less than 100 charachters";
     }else if(!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
-        $error = "Email is unvalid";
+        $error = "Email is invalid";
     }else if(strlen($_POST["message"])>MAX_MESSAGE_LENGTH){
         $error = "message must be less than 255 charachters";
     }else{
