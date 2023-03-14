@@ -1,6 +1,6 @@
 <?php
 $users = read_from_file();
-$keys = array("Visit Date", "Ip Address" ,"Email", "Name");
+$keys = ["Visit Date", "Ip Address" ,"Email", "Name"];
 foreach($users as $user){
     $user_details = explode(",",$user);
     $new_user_details = array_combine($keys, $user_details);

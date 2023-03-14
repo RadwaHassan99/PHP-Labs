@@ -38,22 +38,24 @@ input[type=submit]:hover {
     <body>
         <h3> Contact Form </h3>
         <div id="after_submit">
-            <?php echo $error ?? NULL ?>
+          <h3 style="color:red">
+            <?php echo $error; ?>
+        </h3>
         </div>
         <form id="contact_form" action="index.php" method="POST" enctype="multipart/form-data">
                          
             <div class="row">
                 <label class="required" for="name">Your name:</label><br />
-                <input id="name" class="input" name="name" type="text" value="<?php echo  Validate_Form("name") ?>" size="30" /><br />
+                <input id="name" class="input" name="name" type="text" value="<?php echo  remember_val("name") ?>" size="30" /><br />
 
             </div>
             <div class="row">
                 <label class="required" for="email">Your email:</label><br />
-                <input id="email" class="input" name="email" type="text" value="<?php echo  Validate_Form("email") ?>" size="30" /><br />
+                <input id="email" class="input" name="email" type="text" value="<?php echo  remember_val("email") ?>" size="30" /><br />
             </div>
             <div class="row">
                 <label class="required" for="message">Your message:</label><br />
-                <textarea id="message" class="input" name="message" rows="7" cols="30"><?php echo  Validate_Form("message") ?></textarea><br />
+                <textarea id="message" class="input" name="message" rows="7" cols="30"><?php echo  remember_val("message") ?></textarea><br />
 
             </div>
 
